@@ -1,4 +1,17 @@
+Image
+System.map
 Thumbs.db
+boot/
+fs/
+include/
+init/
+kernel/
+lib/
+mm/
+tools/
+hdc-0.11.img
+*.o
+*.a
 *.log
 *.bak
 .DS_Store
