@@ -1,3 +1,4 @@
+.PHONY: qemu
 OS = Mac
 
 # indicate the Hardware Image file
@@ -137,7 +138,10 @@ cscope:
 start:
 	@qemu-system-x86_64 -m 16M -boot a -fda Image -hda $(HDA_IMG)
 
-debug:
+qemu:
+	@qemu-system-i386 -m 16M -boot a -fda Image -hda $(HDA_IMG) -s -S
+
+gdb:
 	@echo $(OS)
 	#@qemu-system-x86_64 -m 16M -boot a -fda Image -hda $(HDA_IMG) -s -S
 	bash debug.sh
